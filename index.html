@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Four card feature section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      font-family:Poppins, sans-serif;
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+    :root{
+      --primary-red:hsl(0, 78%, 62%);
+      --primary-cyan:hsl(180, 62%, 55%);
+      --primary-orange:hsl(34, 97%, 64%);
+--primary-blue: hsl(212, 86%, 64%);
+
+--neutral-grey-500: hsl(234, 12%, 34%);
+--neutral-grey-400: hsl(212, 6%, 44%);
+--neutral-grey-200: hsl(240, 1%, 29%);
+--neutral-White: hsl(0, 0%, 100%);
+--body-font:15px;
+    }
+    body{
+      display:flex;
+      flex-direction:column;
+      justify-content: center;
+    margin:100px 50px;
+      align-items:center;
+      height:100%;
+      background-color:#e7e2e2fb;
+  
+    }
+    h1{
+     
+      font-family:'Poppins', sans-serif;
+      font-weight:200;
+      text-align:center;
+      color:var(--neutral-grey-500);
+    }
+    h2{
+      font-size:32px;
+      text-align:center;
+       font-family:'Poppins', sans-serif;
+      font-weight:600;
+      color:var(--neutral-grey-200);
+    }
+p:nth-of-type(1){
+  font-size:15px;
+ max-width:30vw;
+ text-align:center;
+ color:var(--neutral-grey-500)
+}
+.container{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows:1fr 1fr 1fr;
+  align-content: center;
+  justify-content:center;
+ 
+}
+.grid-item{
+  width:350px;
+  height:250px;
+  padding:15px 20px;
+  background-color:var(--neutral-White);
+  border-radius:5px;
+  margin:5px 10px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  gap:10px;
+  align-items:flex-start;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.grid-item:nth-of-type(1){
+  border-top:3px solid var(--primary-cyan);
+   grid-row-start:2;
+  grid-column-start:1;
+  position:relative;
+  top:-60px;
+
+  
+}
+.grid-item:nth-of-type(2){
+  grid-row-start:1;
+  grid-column-start:2;
+ position:relative;
+ top:60px;
+    border-top:3px solid var(--primary-red);
+  
+}
+.grid-item:nth-of-type(4){
+  grid-row-start:2;
+  grid-column-start:3;
+  position:relative;
+  top:-60px;
+    border-top:3px solid var(--primary-blue);
+  
+}
+
+.grid-item:nth-of-type(3){
+  grid-column-start: 2;
+  grid-row-start:1;
+ position:relative;
+ top:340px;
+ left:0;
+    border-top:3px solid var(--primary-orange);
+}
+img{
+  align-self:flex-end;
+  margin-top:10px;
+}
+@media (max-width:900px){
+  .container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+  }
+  .grid-item:nth-of-type(1), .grid-item:nth-of-type(2), .grid-item:nth-of-type(3), .grid-item:nth-of-type(4){
+    position:static;
+    top:0;
+    left:0;
+    width:100%;
+  }
+  h1,h2{
+    text-align:center;
+    font-size:22px;
+  }
+  p:nth-of-type(1){
+    max-width:80vw;
+    font-size:14px;
+}
+.container{
+  margin-top:20px;
+}
+.grid-item{
+  margin-bottom:10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+}
+  </style>
+</head>
+<body>
+  <div clas="header">
+  <h1>Reliable, efficient delivery</h1>
+  <h2>Powered by Technology</h2>
+
+  <p>Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful</p>
+  </div>
+<div class="container">
+  <div class="grid-item">
+ <h3>Supervisor</h3>
+  <p>Monitors activity to identify project roadblocks</p>
+  <img src="images/icon-supervisor.svg" alt="supervisor icon">
+</div>
+ <div class="grid-item">
+  <h3>Team Builder</h3>
+  <p>Scans our talent network to create the optimal team for your project</p>
+  <img src="images/icon-team-builder.svg" alt="team builder icon">
+</div>
+<div class="grid-item">
+  <h3>Karma</h3>
+  <p></p>Regularly evaluates our talent to ensure quality</p>
+  <img src="images/icon-karma.svg" alt="karma icon">
+</div>
+
+<div class="grid-item">
+  <h3>Calculator</h3>
+  <p>Uses data from past projects to provide better delivery estimates</p>
+  <img src="images/icon-calculator.svg" alt="calculator icon">
+  </div>
+</div>
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
+</body>
+</html>
